@@ -20,7 +20,7 @@ def get_filters():
     
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city = print(input( '\nWould you like to see data for Chicago, New Yor, or Washington?)\n') )
+    city = input( '\nWould you like to see data for Chicago, New Yor, or Washington?)\n') 
     
     cities_list = ['chicago','new york','washington']
     months_list = ['all','january','february','march','april','may', 'june']
@@ -31,15 +31,21 @@ def get_filters():
 
         
     # TO DO: get user input for month (all, january, february, ... , june)
-    month = print(input('please enter month from janury to june or type "all" '))
+    month = input('please enter month from janury to june or type "all" ')
     while month in months_list == 'false':
+
         print('invalid input! , please enter a month again')
+
 
         
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
+
     day = print(input('please enter a day or type "all" for all days'))
+
     while day in days_list == 'false':
+
         print('invalid input! please enter a day again')
+
 
     print('-'*40)
     return city, month, day
@@ -114,13 +120,13 @@ def station_stats(df):
 
     
     # TO DO: display most commonly used start station
-    s_station = df['Start Station'].mode()
-    print("most common Start Station is: ",s_station)
+   
+    print("most common Start Station is: ",df['Start Station'].mode())
 
     
     # TO DO: display most commonly used end station
-    e_station = df['End Station'].mode()
-    print("most common End Station is: ",e_station)
+   
+    print("most common End Station is: ",df['End Station'].mode())
 
     
     # TO DO: display most frequent combination of start station and end station trip
@@ -140,8 +146,8 @@ def trip_duration_stats(df):
 
     
     # TO DO: display total travel time
-    total_time = df['Trip Duration'].count()
-    print('the total of travel time is : ',total_time)
+   
+    print('the total of travel time is : 'df['Trip Duration'].count())
 
     
     # TO DO: display mean travel time
