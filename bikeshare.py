@@ -44,13 +44,10 @@ def get_filters():
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
 
 
+
     day = print(input('please enter a day or type "all" for all days'))
 
-
-   
     while day in days_list == 'false':
-
-
 
         print('invalid input! please enter a day again')
 
