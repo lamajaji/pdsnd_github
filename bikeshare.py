@@ -20,7 +20,7 @@ def get_filters():
     
     print('Hello! Let\'s explore some US bikeshare data!')
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city = print(input( '\nWould you like to see data for Chicago, New Yor, or Washington?)\n') )
+    city = input( '\nWould you like to see data for Chicago, New Yor, or Washington?)\n') 
     
     cities_list = ['chicago','new york','washington']
     months_list = ['all','january','february','march','april','may', 'june']
@@ -31,13 +31,13 @@ def get_filters():
 
         
     # TO DO: get user input for month (all, january, february, ... , june)
-    month = print(input('please enter month from janury to june or type "all" '))
+    month = input('please enter month from janury to june or type "all" ')
     while month in months_list == 'false':
         print('invalid input! , please enter again')
 
         
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
-    day = print(input('please enter week day or type "all"'))
+    day = input('please enter week day or type "all"')
     while day in days_list == 'false':
         print('invalid input! please enter again')
 
@@ -114,8 +114,8 @@ def station_stats(df):
 
     
     # TO DO: display most commonly used start station
-    s_station = df['Start Station'].mode()
-    print("most common Start Station is: ",s_station)
+   
+    print("most common Start Station is: ",df['Start Station'].mode())
 
     
     # TO DO: display most commonly used end station
