@@ -166,6 +166,7 @@ def user_stats(df):
    
 
     # TO DO: Display counts of gender
+    # note : only NYC and chicago have a 'Gender' in their data
     while city == 'chicago' or city == 'new york':
         df['Gender'].dropna()
         gender_count = df['Gender'].value_counts()
@@ -175,6 +176,7 @@ def user_stats(df):
         
   
     # TO DO: Display earliest, most recent, and most common year of birth
+    # note : only NYC and chicago have a 'Birth year' in their data
     while city == 'chicago' or city == 'new york':
         df['Birth Year'].dropna()
         min_db = df['Birth Year'].min()
